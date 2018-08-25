@@ -47,8 +47,11 @@ func main() {
 	for !window.ShouldClose() {
 		gl.Clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
 
+		// TODO
+		var delta float32
+
 		game.Input();
-		game.Logic();
+		game.Logic(delta);
 		game.Render();
 
 		window.SwapBuffers()
